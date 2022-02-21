@@ -54,7 +54,6 @@ public class ResultsTable {
   private String[] createHeaders() {
     final String[] header;
     final Stream<String> strategies = enabledStrategies().stream()
-        .sorted(Comparator.comparing(Enum::name))
         .map(Enum::name);
     final List<String> headerList = new ArrayList<>();
     headerList.add("Strategy");
