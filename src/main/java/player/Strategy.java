@@ -1,5 +1,6 @@
 package player;
 
+import player.actual.TeamImpl;
 import player.computer.CompletelyRandomPlayer;
 
 import java.util.Arrays;
@@ -7,7 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public enum Strategy {
-  RANDOM(new CompletelyRandomPlayer(), true);
+  RANDOM(new CompletelyRandomPlayer(), true),
+  TEAM_STRATEGY(new TeamImpl(), true);
 
   private final Player player;
   private final boolean enabled;
