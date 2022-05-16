@@ -1,6 +1,7 @@
 package player;
 
 import org.junit.jupiter.api.Test;
+import player.actual.TeamImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -9,7 +10,7 @@ class PlayerTest {
 
   @Test
   void getLastRound() {
-    Player p = new Team15Player();
+    Player p = new TeamImpl();
     assertNull(p.getLastOpponentChoice());
 
     final Choice c1 = Choice.random();
@@ -23,7 +24,7 @@ class PlayerTest {
 
   @Test
   void getLastNRounds() {
-    Player p = new Team15Player();
+    Player p = new TeamImpl();
     assertEquals(0, p.getLastNOpponentChoices(2).size());
 
     final int nrRoundsAdded = 5;
