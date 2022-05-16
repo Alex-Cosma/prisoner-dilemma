@@ -1,13 +1,5 @@
 package player;
 
-import player.actual.ABCPlayer;
-import player.actual.CloudflightersPlayer;
-import player.actual.EchipaTreiPlayer;
-import player.actual.EmanueiiPlayer;
-import player.actual.GitGoodPlayer;
-import player.actual.NashNonEquilibriumPlayer;
-import player.actual.PrizonieriiDinAlcatrazPlayer;
-import player.actual.TheFarAwaysPlayer;
 import player.computer.CompletelyRandomPlayer;
 
 import java.util.Arrays;
@@ -15,15 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public enum Strategy {
-  RANDOM(new CompletelyRandomPlayer(), true),
-  ABC(new ABCPlayer(), true),
-  CLOUDFLIGHTERS(new CloudflightersPlayer(), true),
-  PRIZONIERII_DIN_ALCATRAZ(new PrizonieriiDinAlcatrazPlayer(), true),
-  EMANUEII(new EmanueiiPlayer(), true),
-  NASH_NON_EQ(new NashNonEquilibriumPlayer(), true),
-  ECHIPA_3(new EchipaTreiPlayer(), true),
-  THE_FAR_AWAYS(new TheFarAwaysPlayer(), true),
-  GIT_GOOD(new GitGoodPlayer(), true);
+  RANDOM(new CompletelyRandomPlayer(), true);
 
   private final Player player;
   private final boolean enabled;
